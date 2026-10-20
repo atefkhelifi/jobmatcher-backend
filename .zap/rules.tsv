@@ -1,2 +1,7 @@
 # rule id	action (IGNORE, WARN, FAIL)	comment
 10038	WARN	CSP is set by the bundled nginx and API; review any finding rather than ignoring it
+10055	IGNORE	style-src 'unsafe-inline' is needed by Angular component styles; script-src has no unsafe-inline. Accepted, see docs/architecture.md
+10094	IGNORE	Base64 strings in the minified Angular bundle are code, not data
+10109	IGNORE	Informational: the app is a single page application
+90004	IGNORE	Cross-Origin-Embedder-Policy would block the Google Fonts stylesheet; no cross-origin isolation is needed
+90005	IGNORE	Informational: Sec-Fetch-Dest is a request header sent by browsers, not something the server sets

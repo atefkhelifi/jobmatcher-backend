@@ -36,6 +36,7 @@ jobs:
           target: http://localhost:8088
           rules_file_name: .zap/rules.tsv
           cmd_options: -a
+          allow_issue_writing: false
       - name: Stop
         if: always()
         working-directory: infra
