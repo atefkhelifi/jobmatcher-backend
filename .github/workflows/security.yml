@@ -19,7 +19,6 @@ jobs:
         with:
           repository: atefkhelifi/jobmatcher-frontend
           path: frontend
-          token: ${{ secrets.FRONTEND_REPO_TOKEN }}
       - name: Start the stack
         working-directory: infra
         env:

@@ -31,7 +31,6 @@ jobs:
         with:
           repository: atefkhelifi/jobmatcher-frontend
           path: frontend
-          token: ${{ secrets.FRONTEND_REPO_TOKEN }}
       - uses: actions/setup-node@v4
         with:
           node-version: "24"
@@ -55,7 +54,6 @@ jobs:
         with:
           repository: atefkhelifi/jobmatcher-frontend
           path: frontend
-          token: ${{ secrets.FRONTEND_REPO_TOKEN }}
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
@@ -73,7 +71,6 @@ jobs:
         with:
           repository: atefkhelifi/jobmatcher-frontend
           path: frontend
-          token: ${{ secrets.FRONTEND_REPO_TOKEN }}
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
@@ -116,7 +113,6 @@ jobs:
         with:
           repository: atefkhelifi/jobmatcher-frontend
           path: frontend
-          token: ${{ secrets.FRONTEND_REPO_TOKEN }}
       - name: Build the images and start the stack
         working-directory: infra
         env:

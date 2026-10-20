@@ -42,5 +42,4 @@ Imperative mood, a short summary line, then a paragraph explaining the reason wh
 ## Two repositories
 
 The backend repository (this one) holds `backend/`, `infra/`, `docs/`, `e2e/` and the CI. The Angular app is in
-`atefkhelifi/jobmatcher-frontend`. CI checks it out into `frontend/`; because that repository is private, add a repository secret
-named `FRONTEND_REPO_TOKEN` (a personal access token with read access to it).
+`atefkhelifi/jobmatcher-frontend` (public). CI checks it out into `frontend/`; no secret is needed.
