@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>ai.jobmatcher</groupId>
 	<artifactId>backend</artifactId>
-	<version>0.1.0-SNAPSHOT</version>
+	<version>0.2.0</version>
 	<name>JobMatcher AI backend</name>
 	<description>Open-source job search and CV matching platform</description>
 	<licenses>

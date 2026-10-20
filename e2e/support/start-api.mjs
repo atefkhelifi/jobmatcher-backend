@@ -6,7 +6,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const here = dirname(fileURLToPath(import.meta.url));
-const jar = join(here, '..', '..', 'backend', 'target', 'backend-0.1.0-SNAPSHOT.jar');
+const jar = join(here, '..', '..', 'backend', 'target', 'backend-0.2.0.jar');
 const NAME = 'jm-e2e-db';
 const DB_PORT = 55433;
 
