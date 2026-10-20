@@ -32,9 +32,11 @@ Deliberately avoided: PyMuPDF (AGPL-3.0) and models under restrictive or custom 
 | Arbeitnow job board API | public, no key | https://www.arbeitnow.com/blog/job-board-api (free use, please link back to the offer, which every card does) |
 | Greenhouse Job Board API | public per company board | https://developers.greenhouse.io/job-board.html |
 | France Travail Offres d'emploi v2 | free OAuth client | https://francetravail.io/data/api/offres-emploi |
+| Keejob (Tunisia) RSS feed | public, no key; `https://www.keejob.com/rss/jobs/` is advertised for programs (also in its llms.txt) and allowed by robots.txt | https://www.keejob.com/ (each offer links back to its Keejob page) |
+| Tanitjobs (Tunisia) | **opt-in.** No feed or API: the public job list and each job page's schema.org JobPosting data, robots.txt checked for every page, its keyword search never used, at most 25 pages per run, requests spaced per host | https://www.tanitjobs.com/terms-of-use/ allows viewing content for personal, non-commercial use and forbids overloading the site. It does not mention automated access. Not for shared or commercial deployments without the owner's agreement |
 | Pages submitted by a user | only if robots.txt allows and the page publishes schema.org JobPosting data | the site's own terms |
 
-Not used on purpose: LinkedIn, Indeed and Welcome to the Jungle, whose terms do not permit automated collection.
+Not used on purpose: LinkedIn, Indeed and Welcome to the Jungle, whose terms do not permit automated collection, and OptionCarrière, whose robots.txt disallows its job pages. Emploi Tunisie asks for a 10-second crawl delay and has no feed, so it is not included yet.
 
 ## Learning resources
 

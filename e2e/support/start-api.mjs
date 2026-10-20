@@ -49,6 +49,7 @@ const api = spawn('java', ['-jar', jar], {
     DB_PASSWORD: 'e2e',
     APP_ENCRYPTION_KEY: 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=',
     AI_PROVIDER: 'mock',
+    APP_JOBS_KEEJOB_ENABLED: 'false', // the journey must not call real sites
     APP_JOBS_ARBEITNOW_ENDPOINT: 'http://127.0.0.1:4010/api/job-board-api',
     APP_FETCH_ALLOW_PRIVATE: 'true', // only because the stub job source lives on 127.0.0.1
     APP_FETCH_MIN_INTERVAL: '0s',
