@@ -48,6 +48,8 @@ To use another model server, implement `ai.jobmatcher.ai.TextGenerator` and regi
 | Source | How |
 |---|---|
 | Arbeitnow | works without setup |
+| Keejob (Tunisia) | on by default, from the site's public RSS feed. Switch off with `APP_JOBS_KEEJOB_ENABLED=false` |
+| Tanitjobs (Tunisia) | **off by default**: `APP_JOBS_TANITJOBS_ENABLED=true`. It has no feed, so up to 25 job pages per run (`APP_JOBS_TANITJOBS_MAX_OFFERS`, at most 50) are read one by one. Its terms allow personal, non-commercial use; use it on your own instance only |
 | Company boards (Greenhouse) | `APP_JOBS_GREENHOUSE_BOARDS=gitlab,stripe` |
 | France Travail | free credentials from francetravail.io: `APP_JOBS_FRANCETRAVAIL_CLIENT_ID`, `APP_JOBS_FRANCETRAVAIL_CLIENT_SECRET` |
 | A single page | paste its address on the Jobs page (needs `schema.org/JobPosting` data and robots.txt permission) |

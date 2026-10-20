@@ -68,6 +68,13 @@ app:
     scheduling-enabled: true
     # Greenhouse boards to read, comma separated (company board names). Empty disables the source.
     greenhouse-boards: ${APP_JOBS_GREENHOUSE_BOARDS:}
+    # Keejob (Tunisia) is read from its public RSS feed. On by default.
+    keejob:
+      enabled: ${APP_JOBS_KEEJOB_ENABLED:true}
+    # Tanitjobs (Tunisia) has no feed: pages are read one by one. Off by default, personal non-commercial use only (see docs/install.md).
+    tanitjobs:
+      enabled: ${APP_JOBS_TANITJOBS_ENABLED:false}
+      max-offers: ${APP_JOBS_TANITJOBS_MAX_OFFERS:25}
     francetravail:
       client-id: ${APP_JOBS_FRANCETRAVAIL_CLIENT_ID:}
       client-secret: ${APP_JOBS_FRANCETRAVAIL_CLIENT_SECRET:}

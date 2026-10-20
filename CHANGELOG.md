@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased
+
+### Added
+
+- **Tunisian job sources.** Keejob is read from its public RSS feed and is on by default. Tanitjobs has no feed, so its public job
+  pages are read one by one, only when `APP_JOBS_TANITJOBS_ENABLED=true`, within its terms for personal, non-commercial use
+  (robots.txt checked per page, at most 25 pages per run, its search never used). See `docs/THIRD_PARTY.md`.
+
 ## 0.2.0
 
 The extras from the project brief. Details in `docs/extras.md`.

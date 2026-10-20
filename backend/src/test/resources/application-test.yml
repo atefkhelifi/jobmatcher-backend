@@ -14,3 +14,6 @@ app:
     min-interval: 0s
   jobs:
     scheduling-enabled: false
+    keejob:
+      enabled: false
+
