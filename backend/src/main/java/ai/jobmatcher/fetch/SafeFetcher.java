@@ -24,7 +24,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class SafeFetcher {
 
-    public static final String USER_AGENT = "JobMatcherBot/0.1 (+https://github.com/jobmatcher-ai; personal job search tool)";
+    public static final String USER_AGENT = "JobMatcherBot/0.1 (+https://github.com/atefkhelifi/jobmatcher-backend; personal job search tool)";
     private static final Logger log = LoggerFactory.getLogger(SafeFetcher.class);
     private static final int MAX_REDIRECTS = 3;
 

@@ -14,3 +14,4 @@ e2e/playwright-report/
 
 # The frontend lives in its own repository and is cloned into frontend/
 /frontend/
+__pycache__/
