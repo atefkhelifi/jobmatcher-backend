@@ -2,6 +2,9 @@
 
 Open-source, self-hosted CV analysis and job search. Upload a CV, correct what was extracted, get a ranked list of improvements, and collect real job offers from sources that allow it. Every offer gets an explainable match score against your reviewed CV, and you can write a grounded cover letter and application email for it, then follow the application through to an offer.
 
+> **Live demo (temporary):** https://testimonials-vary-unsubscribe-partially.trycloudflare.com  
+> A personal demo served from the author's own computer through a free tunnel. The address changes when it restarts and it is only up while that computer is on, so the link may be dead.
+
 > **Status: v0.2.0.** Milestones M0 to M7 are done: foundation, identity and CV, job discovery, matching, letters and HR contacts, the application tracker, hardening, and the extras (job alerts, statistics, scam warnings, CV comparison, learning plan, interview preparation, employer overview). See [docs/roadmap.html](docs/roadmap.html) for the original plan.
 
 ## What works today
