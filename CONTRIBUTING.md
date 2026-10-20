@@ -43,3 +43,7 @@ Imperative mood, a short summary line, then a paragraph explaining the reason wh
 
 The backend repository (this one) holds `backend/`, `infra/`, `docs/`, `e2e/` and the CI. The Angular app is in
 `atefkhelifi/jobmatcher-frontend` (public). CI checks it out into `frontend/`; no secret is needed.
+
+## Licenses of dependencies
+
+`python scripts/license-gate.py` (after `npm ci` in `frontend/`) must pass before a dependency is added. See `docs/THIRD_PARTY.md`.

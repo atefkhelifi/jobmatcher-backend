@@ -42,3 +42,19 @@ The learning plan links to free official documentation and courses (Oracle, Spri
 Learn, Google, OWASP and others), listed in `backend/src/main/resources/skills/learning-resources.csv`. The application only links to
 them; it does not copy or redistribute their content. Each belongs to its publisher and is subject to the publisher's terms.
 `scripts/check-links.py` verifies that the links still answer.
+
+## License gate
+
+`scripts/license-gate.py` runs in CI and fails when a Maven or npm dependency is licensed in a way the Apache-2.0 project cannot
+ship with. A dependency passes when at least one of its licenses is permissive (Apache, MIT, BSD, ISC, EPL, EDL, CC0, MPL, CDDL and
+similar), so a dual license such as "EPL-2.0 or LGPL-2.1" passes through EPL. It fails when its only licenses are GPL, LGPL, AGPL,
+SSPL, source-available, unknown or missing.
+
+Two accepted exceptions, each with its reason in the script:
+
+| Dependency | Why it is accepted |
+|---|---|
+| `com.github.junrar:junrar` (UnRar license) | Pulled in by Tika. The license allows extracting RAR files and forbids building a RAR compressor; only reading happens. |
+| `org.codelibs:jhighlight` (CDDL 1.0 or LGPL 2.1) | The CDDL option is file-level copyleft and the library is used unmodified. |
+
+Adding a dependency with a new license means either it passes the rule or someone writes down here and in the script why it is accepted.
