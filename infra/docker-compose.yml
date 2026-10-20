@@ -1,6 +1,7 @@
 # JobMatcher AI local stack.
 #   docker compose --env-file .env up --build              core app (works without any AI model)
 #   docker compose --env-file .env --profile ai up --build   adds Ollama and pulls the configured model
+#   docker compose --env-file .env --profile tunnel up -d     adds a free public https address (see docs/deploy-free.md)
 name: jobmatcher
 
 services:
@@ -52,6 +53,16 @@ services:
       - api
     ports:
       - "${WEB_PORT:-8088}:80"
+    restart: unless-stopped
+
+  # Free public HTTPS address from your own machine, no account and no domain (the address changes on each start).
+  # Read it with: docker compose logs tunnel   (set COOKIE_SECURE=true when you use it)
+  tunnel:
+    profiles: ["tunnel"]
+    image: cloudflare/cloudflared:latest
+    command: tunnel --no-autoupdate --url http://web:80
+    depends_on:
+      - web
     restart: unless-stopped
 
   ollama:
