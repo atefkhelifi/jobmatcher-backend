@@ -60,6 +60,12 @@ application.
 
 Requirements: Docker with Compose v2.
 
+The Angular frontend lives in its own repository. Clone it into `frontend/` next to `backend/` before building:
+
+```bash
+git clone <frontend-repository-url> frontend
+```
+
 ```bash
 cd infra
 cp .env.example .env
