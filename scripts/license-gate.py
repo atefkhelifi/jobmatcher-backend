@@ -23,7 +23,7 @@ FRONTEND = ROOT / "frontend"
 ALLOWED = re.compile(
     r"apache|\bmit\b|\bbsd|\bisc\b|eclipse (public|distribution)|\bepl\b|\bedl\b|\bcc0\b|public domain|zero-clause|0bsd|"
     r"\bcddl\b|mozilla public|\bmpl\b|python-2\.0|blueoak|unlicense|bouncy castle|\bwtfpl\b|\bzlib\b|cc-by-4\.0|"
-    r"the json license",
+    r"the json license|\bofl\b|sil open font",
     re.IGNORECASE,
 )
 

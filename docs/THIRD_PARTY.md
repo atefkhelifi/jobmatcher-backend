@@ -1,6 +1,6 @@
 # Third-party components
 
-This list covers what ships or runs in the current milestone. Versions are pinned in `backend/pom.xml` and `frontend/package.json`. Verify licenses again when upgrading; the CI plan includes an automated license gate (not yet implemented).
+This list covers what ships or runs in the current milestone. Versions are pinned in `backend/pom.xml` and `frontend/package.json`. Verify licenses again when upgrading; `scripts/license-gate.py` checks every dependency in CI.
 
 | Component | Use | License |
 |---|---|---|
@@ -21,7 +21,7 @@ This list covers what ships or runs in the current milestone. Versions are pinne
 | nginx | Static hosting and proxy (container) | BSD-2-Clause |
 | Ollama | Optional local model runtime | MIT |
 | Qwen3 (default model, `qwen3:8b`) | Optional text generation | Apache-2.0 |
-| Bricolage Grotesque, IBM Plex | Web fonts loaded from Google Fonts | SIL OFL 1.1 |
+| Bricolage Grotesque, IBM Plex | Web fonts, self-hosted through the @fontsource npm packages | SIL OFL 1.1 |
 
 Deliberately avoided: PyMuPDF (AGPL-3.0) and models under restrictive or custom licenses, because they would constrain how this project can be licensed and reused.
 
