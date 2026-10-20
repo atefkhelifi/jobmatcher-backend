@@ -14,8 +14,8 @@ jobs:
   zap-baseline:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7
         with:
           repository: atefkhelifi/jobmatcher-frontend
           path: frontend
@@ -31,7 +31,7 @@ jobs:
           for i in $(seq 1 60); do curl -fsS http://localhost:8088/api/status && exit 0; sleep 3; done
           exit 1
       - name: ZAP baseline
-        uses: zaproxy/action-baseline@v0.14.0
+        uses: zaproxy/action-baseline@v0.15.0
         with:
           target: http://localhost:8088
           rules_file_name: .zap/rules.tsv
