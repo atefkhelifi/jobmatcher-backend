@@ -1,0 +1,73 @@
+# Free learning resources, one per line: skill;title;url;provider;kind;language
+# Skill names must match the canonical names in skills.csv. Only official documentation, vendor training and long-standing free
+# courses belong here. A skill without a line gets no resource: links are never invented. Check the links with scripts/check-links.py.
+Java;Dev.java Learn;https://dev.java/learn/;Oracle;tutorial;en
+Java;The Java Tutorials;https://docs.oracle.com/javase/tutorial/;Oracle;tutorial;en
+Kotlin;Kotlin Koans and docs;https://kotlinlang.org/docs/getting-started.html;JetBrains;docs;en
+Python;The Python Tutorial;https://docs.python.org/3/tutorial/;Python Software Foundation;tutorial;en
+JavaScript;MDN JavaScript Guide;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide;Mozilla;guide;en
+TypeScript;TypeScript Handbook;https://www.typescriptlang.org/docs/handbook/intro.html;Microsoft;docs;en
+C#;A tour of C#;https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/;Microsoft;tutorial;en
+Go;A Tour of Go;https://go.dev/tour/;Go team;tutorial;en
+Rust;The Rust Programming Language;https://doc.rust-lang.org/book/;Rust project;book;en
+Swift;The Swift Programming Language;https://docs.swift.org/swift-book/;Apple;book;en
+SQL;SQLBolt interactive lessons;https://sqlbolt.com/;SQLBolt;interactive;en
+Bash;GNU Bash Reference Manual;https://www.gnu.org/software/bash/manual/bash.html;GNU;docs;en
+HTML;MDN Learn web development;https://developer.mozilla.org/en-US/docs/Learn_web_development;Mozilla;course;en
+CSS;MDN Learn CSS;https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics;Mozilla;course;en
+Angular;Angular tutorials;https://angular.dev/tutorials;Angular team;tutorial;en
+React;Learn React;https://react.dev/learn;Meta;tutorial;en
+Vue.js;Vue.js tutorial;https://vuejs.org/tutorial/;Vue team;tutorial;en
+Tailwind CSS;Tailwind CSS documentation;https://tailwindcss.com/docs;Tailwind Labs;docs;en
+RxJS;RxJS documentation;https://rxjs.dev/guide/overview;RxJS team;docs;en
+Spring Boot;Spring guides;https://spring.io/guides;VMware Tanzu;tutorial;en
+Spring Boot;Spring Boot reference;https://docs.spring.io/spring-boot/index.html;VMware Tanzu;docs;en
+Spring;Spring Framework reference;https://docs.spring.io/spring-framework/reference/;VMware Tanzu;docs;en
+Hibernate;Hibernate ORM documentation;https://hibernate.org/orm/documentation/;Red Hat;docs;en
+Node.js;Learn Node.js;https://nodejs.org/en/learn;OpenJS Foundation;tutorial;en
+Express;Express guide;https://expressjs.com/en/guide/routing.html;OpenJS Foundation;guide;en
+Django;Django tutorial;https://docs.djangoproject.com/en/stable/intro/tutorial01/;Django Software Foundation;tutorial;en
+Flask;Flask quickstart;https://flask.palletsprojects.com/en/stable/quickstart/;Pallets;tutorial;en
+FastAPI;FastAPI tutorial;https://fastapi.tiangolo.com/tutorial/;FastAPI;tutorial;en
+.NET;.NET learning hub;https://dotnet.microsoft.com/en-us/learn;Microsoft;course;en
+REST;MDN HTTP overview;https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview;Mozilla;guide;en
+GraphQL;Introduction to GraphQL;https://graphql.org/learn/;GraphQL Foundation;tutorial;en
+Kafka;Apache Kafka introduction;https://kafka.apache.org/intro;Apache;docs;en
+Kafka;Confluent Developer courses;https://developer.confluent.io/courses/;Confluent;course;en
+RabbitMQ;RabbitMQ tutorials;https://www.rabbitmq.com/tutorials;Broadcom;tutorial;en
+PostgreSQL;PostgreSQL tutorial;https://www.postgresql.org/docs/current/tutorial.html;PostgreSQL project;tutorial;en
+MySQL;MySQL tutorial;https://dev.mysql.com/doc/refman/8.4/en/tutorial.html;Oracle;tutorial;en
+MongoDB;MongoDB University;https://learn.mongodb.com/;MongoDB;course;en
+Redis;Redis learn;https://redis.io/learn;Redis;course;en
+Elasticsearch;Elasticsearch getting started;https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started.html;Elastic;docs;en
+Docker;Docker get started;https://docs.docker.com/get-started/;Docker;tutorial;en
+Kubernetes;Kubernetes tutorials;https://kubernetes.io/docs/tutorials/;CNCF;tutorial;en
+Terraform;Terraform tutorials;https://developer.hashicorp.com/terraform/tutorials;HashiCorp;tutorial;en
+Ansible;Ansible getting started;https://docs.ansible.com/ansible/latest/getting_started/index.html;Red Hat;docs;en
+Jenkins;Jenkins user documentation;https://www.jenkins.io/doc/;Jenkins project;docs;en
+GitLab CI;GitLab CI/CD tutorials;https://docs.gitlab.com/ci/;GitLab;docs;en
+GitHub Actions;GitHub Actions quickstart;https://docs.github.com/en/actions/quickstart;GitHub;tutorial;en
+CI/CD;GitHub Actions quickstart;https://docs.github.com/en/actions/quickstart;GitHub;tutorial;en
+Git;Pro Git book;https://git-scm.com/book/en/v2;Git project;book;en
+Linux;Linux Journey;https://linuxjourney.com/;Linux Journey;interactive;en
+AWS;AWS Skill Builder digital training;https://skillbuilder.aws/;Amazon Web Services;course;en
+Azure;Microsoft Learn for Azure;https://learn.microsoft.com/en-us/training/azure/;Microsoft;course;en
+GCP;Google Cloud Skills Boost;https://www.cloudskillsboost.google/;Google;course;en
+JUnit;JUnit 5 user guide;https://junit.org/junit5/docs/current/user-guide/;JUnit team;docs;en
+Mockito;Mockito documentation;https://site.mockito.org/;Mockito team;docs;en
+Selenium;Selenium documentation;https://www.selenium.dev/documentation/;Selenium project;docs;en
+Playwright;Playwright getting started;https://playwright.dev/docs/intro;Microsoft;tutorial;en
+Cypress;Cypress documentation;https://docs.cypress.io/app/get-started/why-cypress;Cypress;docs;en
+Jest;Jest getting started;https://jestjs.io/docs/getting-started;OpenJS Foundation;tutorial;en
+Maven;Maven in five minutes;https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html;Apache;tutorial;en
+Gradle;Gradle user manual;https://docs.gradle.org/current/userguide/userguide.html;Gradle;docs;en
+Agile;The Agile Manifesto;https://agilemanifesto.org/;Agile Alliance;reference;en
+Machine Learning;Machine Learning Crash Course;https://developers.google.com/machine-learning/crash-course;Google;course;en
+Pandas;pandas getting started;https://pandas.pydata.org/docs/getting_started/index.html;pandas;docs;en
+PyTorch;PyTorch tutorials;https://pytorch.org/tutorials/;PyTorch Foundation;tutorial;en
+TensorFlow;TensorFlow tutorials;https://www.tensorflow.org/tutorials;Google;tutorial;en
+Spark;Spark quick start;https://spark.apache.org/docs/latest/quick-start.html;Apache;tutorial;en
+Security;OWASP Top 10;https://owasp.org/www-project-top-ten/;OWASP;reference;en
+Security;OWASP Cheat Sheet Series;https://cheatsheetseries.owasp.org/;OWASP;reference;en
+Figma;Figma learn;https://help.figma.com/hc/en-us/categories/360002051613-Get-started;Figma;docs;en
+Power BI;Microsoft Learn for Power BI;https://learn.microsoft.com/en-us/training/powerplatform/power-bi;Microsoft;course;en

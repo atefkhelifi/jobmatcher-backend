@@ -1,0 +1,77 @@
+# canonical;category;aliases separated by |
+Java;language;java|java 8|java 11|java 17|java 21|j2ee|jee
+Kotlin;language;kotlin
+Python;language;python|python3
+JavaScript;language;javascript|js|ecmascript
+TypeScript;language;typescript|ts
+C#;language;c#|csharp|c sharp
+C++;language;c++|cpp
+Go;language;golang|go lang
+Rust;language;rust
+PHP;language;php
+Ruby;language;ruby
+Swift;language;swift
+SQL;language;sql|t-sql|pl/sql|plsql
+Bash;language;bash|shell scripting
+HTML;frontend;html|html5
+CSS;frontend;css|css3|sass|scss
+Angular;frontend;angular|angularjs|angular 2+
+React;frontend;react|reactjs|react.js
+Vue.js;frontend;vue|vuejs|vue.js
+Tailwind CSS;frontend;tailwind|tailwindcss|tailwind css
+RxJS;frontend;rxjs
+Spring Boot;backend;spring boot|springboot
+Spring;backend;spring|spring framework|spring mvc|spring security|spring data
+Hibernate;backend;hibernate|jpa
+Node.js;backend;node|nodejs|node.js
+Express;backend;express|expressjs
+Django;backend;django
+Flask;backend;flask
+FastAPI;backend;fastapi
+.NET;backend;.net|dotnet|asp.net|.net core
+REST;backend;rest|restful|rest api|rest apis|api rest
+GraphQL;backend;graphql
+Microservices;architecture;microservices|microservice|micro-services|microservices architecture
+Kafka;data;kafka|apache kafka
+RabbitMQ;data;rabbitmq
+PostgreSQL;database;postgresql|postgres|postgre
+MySQL;database;mysql|mariadb
+Oracle;database;oracle|oracle db
+MongoDB;database;mongodb|mongo
+Redis;database;redis
+Elasticsearch;database;elasticsearch|elastic|opensearch
+Docker;devops;docker|docker compose|conteneurisation
+Kubernetes;devops;kubernetes|k8s
+Terraform;devops;terraform
+Ansible;devops;ansible
+Jenkins;devops;jenkins
+GitLab CI;devops;gitlab ci|gitlab-ci|gitlab ci/cd
+GitHub Actions;devops;github actions
+CI/CD;devops;ci/cd|ci cd|cicd|integration continue|intégration continue
+Git;tooling;git|github|gitlab|bitbucket
+Linux;tooling;linux|unix
+AWS;cloud;aws|amazon web services
+Azure;cloud;azure|microsoft azure
+GCP;cloud;gcp|google cloud|google cloud platform
+JUnit;testing;junit|junit5|junit 5
+Mockito;testing;mockito
+Selenium;testing;selenium
+Playwright;testing;playwright
+Cypress;testing;cypress
+Jest;testing;jest
+Maven;tooling;maven
+Gradle;tooling;gradle
+Jira;tooling;jira
+Agile;method;agile|agilité|scrum|kanban|safe
+TDD;method;tdd|test-driven development|test driven development
+Machine Learning;data;machine learning|ml|apprentissage automatique
+Deep Learning;data;deep learning|apprentissage profond
+NLP;data;nlp|natural language processing|traitement du langage naturel
+TensorFlow;data;tensorflow
+PyTorch;data;pytorch
+Pandas;data;pandas
+Spark;data;spark|apache spark|pyspark
+Power BI;data;power bi|powerbi
+Tableau;data;tableau
+Figma;design;figma
+Security;security;owasp|cybersécurité|cybersecurity|oauth2|oauth|jwt|keycloak

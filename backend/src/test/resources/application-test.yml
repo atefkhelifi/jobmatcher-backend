@@ -1,0 +1,16 @@
+app:
+  crypto:
+    key: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+  ai:
+    provider: mock
+  rate-limit:
+    login-per-minute: 1000
+    register-per-hour: 1000
+    upload-per-minute: 1000
+    analysis-per-minute: 1000
+    discovery-per-minute: 1000
+  fetch:
+    allow-private: true
+    min-interval: 0s
+  jobs:
+    scheduling-enabled: false

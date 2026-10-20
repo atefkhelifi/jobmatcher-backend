@@ -1,0 +1,79 @@
+# JobMatcher AI local stack.
+#   docker compose --env-file .env up --build              core app (works without any AI model)
+#   docker compose --env-file .env --profile ai up --build   adds Ollama and pulls the configured model
+name: jobmatcher
+
+services:
+  db:
+    image: pgvector/pgvector:pg17
+    environment:
+      POSTGRES_DB: jobmatcher
+      POSTGRES_USER: jobmatcher
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?Set DB_PASSWORD in .env}
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U jobmatcher -d jobmatcher"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+
+  api:
+    build: ../backend
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DB_URL: jdbc:postgresql://db:5432/jobmatcher
+      DB_USER: jobmatcher
+      DB_PASSWORD: ${DB_PASSWORD}
+      APP_ENCRYPTION_KEY: ${APP_ENCRYPTION_KEY:?Set APP_ENCRYPTION_KEY in .env (openssl rand -base64 32)}
+      AI_PROVIDER: ${AI_PROVIDER:-ollama}
+      OLLAMA_URL: http://ollama:11434
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-qwen3:8b}
+      COOKIE_SECURE: ${COOKIE_SECURE:-false}
+      APP_JOBS_GREENHOUSE_BOARDS: ${APP_JOBS_GREENHOUSE_BOARDS:-}
+      APP_JOBS_FRANCETRAVAIL_CLIENT_ID: ${APP_JOBS_FRANCETRAVAIL_CLIENT_ID:-}
+      APP_JOBS_FRANCETRAVAIL_CLIENT_SECRET: ${APP_JOBS_FRANCETRAVAIL_CLIENT_SECRET:-}
+    healthcheck:
+      test: ["CMD-SHELL", "bash -c 'exec 3<>/dev/tcp/127.0.0.1/8080 && printf \"GET /actuator/health HTTP/1.0\r\n\r\n\" >&3 && grep -q UP <&3'"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
+    restart: unless-stopped
+
+  web:
+    build: ../frontend
+    depends_on:
+      - api
+    ports:
+      - "${WEB_PORT:-8088}:80"
+    restart: unless-stopped
+
+  ollama:
+    profiles: ["ai"]
+    image: ollama/ollama:latest
+    volumes:
+      - ollama:/root/.ollama
+    restart: unless-stopped
+    # GPU: uncomment on a host with the NVIDIA container toolkit.
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices: [{ driver: nvidia, count: all, capabilities: [gpu] }]
+
+  ollama-pull:
+    profiles: ["ai"]
+    image: ollama/ollama:latest
+    depends_on:
+      - ollama
+    environment:
+      OLLAMA_HOST: http://ollama:11434
+    entrypoint: ["/bin/sh", "-c", "ollama pull ${OLLAMA_MODEL:-qwen3:8b}"]
+    restart: "no"
+
+volumes:
+  dbdata:
+  ollama:

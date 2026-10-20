@@ -1,0 +1,24 @@
+name: Link check
+
+# The learning plan points at free resources kept by hand in learning-resources.csv. Links rot, so check them weekly.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 5 * * 1"
+  pull_request:
+    paths:
+      - "backend/src/main/resources/skills/learning-resources.csv"
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check learning resource links
+        run: python -I scripts/check-links.py --strict

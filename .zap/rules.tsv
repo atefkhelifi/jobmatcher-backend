@@ -1,0 +1,2 @@
+# rule id	action (IGNORE, WARN, FAIL)	comment
+10038	WARN	CSP is set by the bundled nginx and API; review any finding rather than ignoring it

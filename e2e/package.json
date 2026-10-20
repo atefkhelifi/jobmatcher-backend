@@ -1,0 +1,13 @@
+{
+  "name": "jobmatcher-e2e",
+  "private": true,
+  "version": "0.0.0",
+  "description": "End-to-end test of the ten Definition-of-Done steps, against the real API and database.",
+  "scripts": {
+    "test": "playwright test",
+    "screenshots": "SCREENSHOTS=1 playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0"
+  }
+}

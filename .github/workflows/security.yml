@@ -1,0 +1,41 @@
+name: Security scan
+
+# OWASP ZAP baseline (passive) scan of the running stack. Manual and weekly, because it needs the full Docker stack.
+# Not yet run by the maintainers locally; treat its first results as a starting point and tune .zap/rules.tsv.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 4 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  zap-baseline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Start the stack
+        working-directory: infra
+        env:
+          DB_PASSWORD: scan-only-password
+          APP_ENCRYPTION_KEY: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+          AI_PROVIDER: mock
+        run: docker compose up --build -d
+      - name: Wait for it
+        run: |
+          for i in $(seq 1 60); do curl -fsS http://localhost:8088/api/status && exit 0; sleep 3; done
+          exit 1
+      - name: ZAP baseline
+        uses: zaproxy/action-baseline@v0.14.0
+        with:
+          target: http://localhost:8088
+          rules_file_name: .zap/rules.tsv
+          cmd_options: -a
+      - name: Stop
+        if: always()
+        working-directory: infra
+        env:
+          DB_PASSWORD: scan-only-password
+          APP_ENCRYPTION_KEY: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+        run: docker compose down -v

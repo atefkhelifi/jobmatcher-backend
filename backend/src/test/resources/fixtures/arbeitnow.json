@@ -1,0 +1,49 @@
+{
+  "data": [
+    {
+      "slug": "java-developer-berlin-1001",
+      "company_name": "Acme GmbH",
+      "title": "Java Developer (m/w/d)",
+      "description": "&lt;p&gt;&lt;strong&gt;About the role&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Build REST APIs with Spring Boot&lt;/li&gt;&lt;li&gt;Work with PostgreSQL &amp;amp; Docker&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;We offer a friendly team.&lt;/p&gt;&lt;script&gt;alert(1)&lt;/script&gt;",
+      "remote": false,
+      "url": "https://www.arbeitnow.com/jobs/companies/acme-gmbh/java-developer-berlin-1001",
+      "tags": ["Technology"],
+      "job_types": ["full_time"],
+      "location": "Berlin",
+      "created_at": 1760000000
+    },
+    {
+      "slug": "remote-python-engineer-1002",
+      "company_name": "Globex",
+      "title": "Remote Python Engineer",
+      "description": "&lt;p&gt;Design data pipelines in Python and Kafka.&lt;/p&gt;",
+      "remote": true,
+      "url": "https://www.arbeitnow.com/jobs/companies/globex/remote-python-engineer-1002",
+      "tags": [],
+      "job_types": [],
+      "location": "Munich",
+      "created_at": 1760100000
+    },
+    {
+      "slug": "java-developer-berlin-1003",
+      "company_name": "ACME GmbH",
+      "title": "Java Developer",
+      "description": "&lt;p&gt;Same role, reposted with a different title suffix.&lt;/p&gt;",
+      "remote": false,
+      "url": "https://www.arbeitnow.com/jobs/companies/acme-gmbh/java-developer-berlin-1003",
+      "tags": [],
+      "job_types": [],
+      "location": "Berlin",
+      "created_at": 1760200000
+    },
+    {
+      "slug": "",
+      "company_name": "Broken",
+      "title": "Missing slug is skipped",
+      "description": "x",
+      "url": "https://www.arbeitnow.com/jobs/x"
+    }
+  ],
+  "links": { "first": "https://www.arbeitnow.com/api/job-board-api?page=1", "next": null },
+  "meta": { "current_page": 1 }
+}
